@@ -1,6 +1,9 @@
 <script setup>
+import { ref } from 'vue';
+import TabbalbleTextarea from '../components/TabbableTextarea.vue'
 import { useFlash } from '../composables/useFlash';
 let { flash } = useFlash();
+let comment = ref('test value');
 </script>
 
 <template>
@@ -8,8 +11,11 @@ let { flash } = useFlash();
     <h1>This is an about page</h1>
     <main>
       <p>
-        <button @click="flash('Yah!','It Works On About Page', 'info')">Click Me</button>
+        <button @click="flash('Yah!', 'It Works On About Page', 'info')">Click Me</button>
       </p>
+      <form>
+        <TabbalbleTextarea v-model="comment" style="width: 150%; height: 300px;" />
+      </form>
     </main>
   </div>
 </template>

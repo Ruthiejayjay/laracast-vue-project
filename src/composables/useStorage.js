@@ -12,14 +12,14 @@ export function useStorage(key, val = null) {
     watch(val, write);
 
     function read() {
-        return JSON.parse(localStorage.getItem(key));
+        return localStorage.getItem(key);
     }
 
     function write() {
         if (val.value === '' || val.value === null) {
             localStorage.removeItem(key);
         } else {
-            localStorage.setItem(key, JSON.stringify(val.value))
+            localStorage.setItem(key, val.value)
         }
 
     }
