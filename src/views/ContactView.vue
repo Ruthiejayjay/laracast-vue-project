@@ -1,11 +1,10 @@
-<script>
-export default {
-    methods: {
-        flash(message) {
-             alert(message)
-        }
-    }
-}
+<script setup>
+import { useFlash } from '../composables/useFlash';
+import { useStorage } from '../composables/useStorage'
+let { flash } = useFlash();
+
+let song = useStorage('song', 'Boy with luv');
+let bias = useStorage('bias', 'RM')
 </script>
 
 <template>
@@ -13,7 +12,13 @@ export default {
         <h1>This is an contact page</h1>
         <main>
             <p>
-                <button @click="flash('It Works')">Click Me</button>
+                <button @click="flash('Test','It Works')">Click Me</button>
+            </p>
+            <p>
+                What is your favorite BTS song? <input type="text" v-model="song">
+            </p>
+            <p>
+                Who is your BTS bias? <input type="text" v-model="bias">
             </p>
         </main>
     </div>
