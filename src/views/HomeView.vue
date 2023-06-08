@@ -1,8 +1,7 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue';
 import { ref } from 'vue';
-
-let message =  ref('Hello RMMM!');
+import Quiz from '../components/Quiz/Quiz.vue';
+let message = ref('Hello RMMM!');
 
 let doSomething = () => {
   alert("doing it now")
@@ -17,7 +16,6 @@ setTimeout(() => {
 
 <template>
   <main>
-    <TheWelcome />
     <p>{{ message }}</p>
     <p>
       <input type="text" v-model="message">
@@ -25,5 +23,6 @@ setTimeout(() => {
     <p>
       <button @click="doSomething">Click Me</button>
     </p>
+    <Quiz :quiz="{ name: 'My First Quiz', questions: [] }" />
   </main>
 </template>
