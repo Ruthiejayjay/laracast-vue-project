@@ -1,14 +1,11 @@
 <template>
     <QuizHeader />
     <QuizQuestion />
-    <QuizFooter :quiz="quiz" />
+    <QuizFooter />
 </template>
 <script setup>
 import QuizHeader from './QuizHeader.vue';
 import QuizQuestion from './QuizQuestion.vue';
 import QuizFooter from './QuizFooter.vue';
-import { provide} from 'vue';
-
-let props =  defineProps({ quiz: Object });
-provide('quiz', props.quiz)
+import { state } from '../../stores/quizStore';
 </script>
