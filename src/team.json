@@ -1,0 +1,48 @@
+{
+    "name": "BTS",
+    "spots": 7,
+    "members": [
+        {
+            "name": "RM",
+            "email": "rm@rm.com",
+            "status": "Active",
+            "img": "src/assets/images/rm.jpg"
+        },
+        {
+            "name": "Jhope",
+            "email": "jhope@jhope.com",
+            "status": "Inactive",
+            "img": "src/assets/images/jhope.jpg"
+        },
+        {
+            "name": "Jin",
+            "email": "jin@jin.com",
+            "status": "Inactive",
+            "img": "src/assets/images/jin.jpg"
+        },
+        {
+            "name": "Suga",
+            "email": "suga@suga.com",
+            "status": "Active",
+            "img": "src/assets/images/suga.jpg"
+        },
+        {
+            "name": "Jimin",
+            "email": "jimin@jimin.com",
+            "status": "Active",
+            "img": "src/assets/images/jimin.jpg"
+        },
+        {
+            "name": "V",
+            "email": "v@v.com",
+            "status": "Active",
+            "img": "src/assets/images/v.jpg"
+        },
+        {
+            "name": "Jungkook",
+            "email": "jungkook@jungkook.com",
+            "status": "Active",
+            "img": "src/assets/images/jungkook.jpg"
+        }
+    ]
+}
