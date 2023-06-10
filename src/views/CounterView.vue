@@ -1,11 +1,15 @@
 <script setup>
-import { counter } from '@/stores/counterStore.js'
+import { useCounterStore } from '@/stores/counterStore.js';
+
+let counter = useCounterStore()
 </script>
 
 <template>
     <div>
        <h1>{{ counter.count }}</h1>
-       <button @click="counter.increment">Increment</button>
-       <button @click="counter.decrement">Decrement</button>
+       <button 
+        :disabled="!counter.remaining"
+        @click="counter.increment">Increment ({{ counter.remaining }} Remaining)</button>
+       <button v-if="counter.count > 0" @click="counter.decrement">Decrement</button>
     </div>
 </template>
