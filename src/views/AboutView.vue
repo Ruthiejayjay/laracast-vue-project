@@ -2,9 +2,10 @@
 import { ref } from 'vue';
 import TabbalbleTextarea from '../components/TabbableTextarea.vue'
 import { useFlash } from '../composables/useFlash';
-import { counter } from '../stores/CounterStore';
+import { useCounterStore } from '../stores/CounterStore';
 let { flash } = useFlash();
 let comment = ref('test value');
+let counter = useCounterStore()
 </script>
 
 <template>

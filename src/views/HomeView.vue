@@ -18,7 +18,7 @@ setTimeout(() => {
 
 <template>
   <main>
-    <p>{{ message }}</p>
+    <p class="text-3xl font-bold underline">{{ message }}</p>
     <p>
       <input type="text" v-model="message">
     </p>

@@ -7,7 +7,7 @@ let counter = useCounterStore()
 <template>
     <div>
        <h1>{{ counter.count }}</h1>
-       <button 
+       <button class=""
         :disabled="!counter.remaining"
         @click="counter.increment">Increment ({{ counter.remaining }} Remaining)</button>
        <button v-if="counter.count > 0" @click="counter.decrement">Decrement</button>
