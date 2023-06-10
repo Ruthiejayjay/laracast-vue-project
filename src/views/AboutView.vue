@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import TabbalbleTextarea from '../components/TabbableTextarea.vue'
 import { useFlash } from '../composables/useFlash';
+import { counter } from '../stores/CounterStore';
 let { flash } = useFlash();
 let comment = ref('test value');
 </script>
@@ -9,6 +10,7 @@ let comment = ref('test value');
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <p>The current count is {{ counter.count }}</p>
     <main>
       <p>
         <button @click="flash('Yah!', 'It Works On About Page', 'info')">Click Me</button>

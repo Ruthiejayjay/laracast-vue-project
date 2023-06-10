@@ -1,6 +1,6 @@
 <template>
     <h4 style="margin-top: 20px;">Quiz Footer</h4>
-    <QuizFooterLinks :quiz="quiz" />
+    <QuizFooterLinks />
 </template>
 <script setup>
 import QuizFooterLinks from './QuizFooterLinks.vue';

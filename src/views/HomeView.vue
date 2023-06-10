@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import Quiz from '../components/Quiz/Quiz.vue';
+import {state} from '../stores/quizStore'
 let message = ref('Hello RMMM!');
 
 let doSomething = () => {
@@ -10,6 +11,7 @@ let doSomething = () => {
 setTimeout(() => {
   message.value = 'Saranghye Oppa'
 }, 2000);
+
 
 
 </script>
@@ -23,6 +25,6 @@ setTimeout(() => {
     <p>
       <button @click="doSomething">Click Me</button>
     </p>
-    <Quiz :quiz="{ name: 'My First Quiz', questions: [] }" />
+    <Quiz :quiz="state" />
   </main>
 </template>
