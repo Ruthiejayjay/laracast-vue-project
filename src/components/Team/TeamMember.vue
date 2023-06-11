@@ -15,7 +15,7 @@ defineProps ({
         </td>
         <td class="text-gray-500 px-6 py-4">{{ email }}</td>
         <td class="px-6 py-4">
-            <button class="text-purple-500 text-xl">{{ status }}</button>
+            <button class=" text-xl" :class="status == 'Inactive' ? 'text-purple-300': 'text-purple-500'">{{ status }}</button>
         </td>
     </tr>
 </template>

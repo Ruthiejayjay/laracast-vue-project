@@ -10,7 +10,7 @@ let doSomething = () => {
 
 setTimeout(() => {
   message.value = 'Saranghye Oppa'
-}, 2000);
+}, 4000);
 
 
 
@@ -20,7 +20,7 @@ setTimeout(() => {
   <main>
     <p class="text-3xl font-bold underline">{{ message }}</p>
     <p>
-      <input type="text" v-model="message">
+      <input class="text-black" type="text" v-model="message">
     </p>
     <p>
       <button @click="doSomething">Click Me</button>
